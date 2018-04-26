@@ -34,6 +34,12 @@ windows {
     message($$COMPILE_MSG windows)
 }
 
+linux {
+    SOURCES += SysInfoLinuxImpl.cpp
+    HEADERS += SysInfoLinuxImpl.h
+    message($$COMPILE_MSG linux)
+}
+
 macx {
     SOURCES += SysInfoMacImpl.cpp
     HEADERS += SysInfoMacImpl.h
