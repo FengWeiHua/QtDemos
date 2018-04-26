@@ -6,6 +6,8 @@
 #include <mach/mach_host.h>
 #include <mach/vm_map.h>
 
+#include <QDebug>
+
 SysInfoMacImpl::SysInfoMacImpl() :
     SysInfo()
 {

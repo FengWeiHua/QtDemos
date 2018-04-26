@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QLabel>
+#include <QHBoxLayout>
+
+#include "CpuWidget.h"
 
 namespace Ui {
 class MainWindow;
@@ -17,6 +21,8 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    CpuWidget mCpuWidget;
+    QHBoxLayout *mainLayout;
 };
 
 #endif // MAINWINDOW_H
