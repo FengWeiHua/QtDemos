@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
     , mCpuWidget(this)
+    , mMemoryWidget(this)
 {
     ui->setupUi(this);
     SysInfo::instance().init();
@@ -15,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
     mainLayout = new QHBoxLayout(ui->centralWidget);
     ui->centralWidget->setLayout(mainLayout);
     mainLayout->addWidget(&mCpuWidget);
+    mainLayout->addWidget(&mMemoryWidget);
 }
 
 MainWindow::~MainWindow()

@@ -6,6 +6,7 @@
 #include <QHBoxLayout>
 
 #include "CpuWidget.h"
+#include "MemoryWidget.h"
 
 namespace Ui {
 class MainWindow;
@@ -22,6 +23,7 @@ public:
 private:
     Ui::MainWindow *ui;
     CpuWidget mCpuWidget;
+    MemoryWidget mMemoryWidget;
     QHBoxLayout *mainLayout;
 };
 

@@ -13,27 +13,31 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = ch02-sysinfo
 TEMPLATE = app
 
-
 SOURCES += main.cpp\
         mainwindow.cpp \
     SysInfo.cpp \
     SysInfoWidget.cpp \
-    CpuWidget.cpp
+    CpuWidget.cpp \
+    MemoryWidgedt.cpp
 
 HEADERS  += mainwindow.h \
     SysInfo.h \
     SysInfoWidget.h \
-    CpuWidget.h
+    CpuWidget.h \
+    MemoryWidget.h
 
+COMPILE_MSG = "Compiling on"
 
 windows {
     SOURCES += SysInfoWindowsImpl.cpp
     HEADERS += SysInfoWindowsImpl.h
+    message($$COMPILE_MSG windows)
 }
 
 macx {
     SOURCES += SysInfoMacImpl.cpp
     HEADERS += SysInfoMacImpl.h
+    message($$COMPILE_MSG mac)
 }
 
 FORMS    += mainwindow.ui
