@@ -59,7 +59,7 @@ double SysInfoWindowsImpl::cpuLoadAverage()
     qulonglong currentIdle = secondSample[0] - firstSample[0];
     qulonglong currentKernel = secondSample[1] - firstSample[1];
     qulonglong currentUser = secondSample[2] - firstSample[2];
-    qulonglong currentSystem = secondSample[3] - firstSample[3];
+    qulonglong currentSystem = currentKernel + currentUser;
 
     double percent = (currentSystem - currentIdle) * 100.0 / currentSystem;
 
