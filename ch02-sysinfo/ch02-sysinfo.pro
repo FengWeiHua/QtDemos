@@ -23,6 +23,12 @@ HEADERS  += mainwindow.h \
     SysInfo.h \
     SysInfoWidget.h
 
+
+windows {
+    SOURCES += SysInfoWindowsImpl.cpp
+    HEADERS += SysInfoWindowsImpl.h
+}
+
 macx {
     SOURCES += SysInfoMacImpl.cpp
     HEADERS += SysInfoMacImpl.h
