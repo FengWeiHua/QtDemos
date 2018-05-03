@@ -22,3 +22,23 @@ void Picture::setFileUrl(const QUrl &fileUrl)
 {
     mFileUrl = fileUrl;
 }
+
+int Picture::id() const
+{
+    return mId;
+}
+
+void Picture::setId(int id)
+{
+    mId = id;
+}
+
+int Picture::albumId() const
+{
+    return mAlbumId;
+}
+
+void Picture::setAlbumId(int albumId)
+{
+    mAlbumId = albumId;
+}

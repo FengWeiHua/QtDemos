@@ -14,8 +14,18 @@ TEMPLATE = lib
 DEFINES += GALLERYCORE_LIBRARY
 
 SOURCES += album.cpp \
-    picture.cpp
+    picture.cpp \
+    DatabaseManager.cpp \
+    AlbumDao.cpp \
+    picturedao.cpp \
+    albummodel.cpp \
+    picturemodel.cpp
 
 HEADERS += album.h\
         gallery-core_global.h \
-    picture.h
+    picture.h \
+    DatabaseManager.h \
+    AlbumDao.h \
+    picturedao.h \
+    albummodel.h \
+    picturemodel.h
